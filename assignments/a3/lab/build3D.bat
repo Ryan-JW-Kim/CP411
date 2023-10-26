@@ -1,0 +1,1 @@
+g++ opengl_transform3d.cpp -lfreeglut -lopengl32 -lglu32 -o opengl_transform3d.exe

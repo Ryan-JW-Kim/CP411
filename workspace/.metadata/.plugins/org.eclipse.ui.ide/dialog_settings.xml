@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\cp411\assignments\a3\SimpleView1"/>
+		<item value="C:\cp411\assignments\a3"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+			<item value="C:\cp411\a1"/>
+			<item value="C:\cp411\workspace\cube"/>
+			<item value="C:\cp411\workspace\Test"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\cp411\assignments\a3\SimpleView1Project.zip"/>
+			<item value="C:\cp411\assignments\a3\SimpleView1.zip"/>
+			<item value="C:\cp411\assignments\a3\lab\Mesh.zip"/>
+			<item value="C:\Users\RjKim\Downloads\glsl_demo.zip"/>
+			<item value="C:\Users\RjKim\Downloads\cube.zip"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item value="C:\cp411\a1\MyOpenGL" key="OUTSIDE_LOCATION"/>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="533" key="DIALOG_X_ORIGIN"/>
+		<item value="743" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

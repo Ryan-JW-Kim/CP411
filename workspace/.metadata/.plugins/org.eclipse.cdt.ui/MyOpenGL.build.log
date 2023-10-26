@@ -1,0 +1,20 @@
+15:46:37 **** Incremental Build of configuration Debug for project MyOpenGL ****
+Info: Internal Builder is used for build
+g++ -o MyOpenGL.exe "src\\MyOpenGL.o" "src\\opengl_menu.o" "src\\opengl_transform2d.o" "src\\opengl_transform3d.o" -lopengl32 -lglu32 -lfreeglut -lglew32 -lwinmm -lgdi32 
+src\opengl_menu.o: In function `main':
+C:\cp411\a1\MyOpenGL\Debug/../src/opengl_menu.cpp:73: multiple definition of `main'
+src\MyOpenGL.o:C:\cp411\a1\MyOpenGL\Debug/../src/MyOpenGL.cpp:139: first defined here
+src\opengl_transform2d.o: In function `Z4initv':
+C:\cp411\a1\MyOpenGL\Debug/../src/opengl_transform2d.cpp:15: multiple definition of `init()'
+src\opengl_menu.o:C:\cp411\a1\MyOpenGL\Debug/../src/opengl_menu.cpp:13: first defined here
+src\opengl_transform2d.o: In function `main':
+C:\cp411\a1\MyOpenGL\Debug/../src/opengl_transform2d.cpp:155: multiple definition of `main'
+src\MyOpenGL.o:C:\cp411\a1\MyOpenGL\Debug/../src/MyOpenGL.cpp:139: first defined here
+src\opengl_transform2d.o:opengl_transform2d.cpp:(.data+0x0): multiple definition of `winWidth'
+src\opengl_menu.o:opengl_menu.cpp:(.data+0x0): first defined here
+src\opengl_transform2d.o:opengl_transform2d.cpp:(.data+0x4): multiple definition of `winHeight'
+src\opengl_menu.o:opengl_menu.cpp:(.data+0x4): first defined here
+collect2: ld returned 1 exit status
+
+15:46:37 Build Finished (took 171ms)
+

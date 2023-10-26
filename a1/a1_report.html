@@ -1,0 +1,51 @@
+<h1 id="a1-report">A1 Report</h1>
+<p>Author: Ryan Kim</p>
+<p>Date: Sept. 19 2023</p>
+<p>Check <a href="readme.txt" class="uri">readme.txt</a> for course work statement and self-evaluation.</p>
+<h2 id="q1-concepts-of-raster-graphics-short-answer">Q1 Concepts of raster graphics (short answer)</h2>
+<h3 id="q1.1-frame-buffer">Q1.1 frame buffer</h3>
+<p>A memory block to allocated to store raster dots within a raster pattern. Generally stored in 2D matrix data structure.</p>
+<p>The size of the frame buffer is determined by <span class="math inline">frame resolution * color depth</span></p>
+<h3 id="q1.2-pixel">Q1.2 pixel</h3>
+<p>A pixel is a single picture element within a row. A pixel only stores a color value and its location within a frame determines is position on the screen.</p>
+<h3 id="q1.3-color-depth">Q1.3 color depth</h3>
+<p>Color depth refers to the number of bits used to store a pixels assigned color and therefore the <em>depth</em> of possible colors. 8 bits allows for rgb (red, green blue) to each store an integer value of from 0 to 256. Thus the color depth of an 8-bit pixel would be <span class="math inline">256 * 256 * 256 = 16777216</span> possible colors for a single pixel.</p>
+<h3 id="q1.4-resolution">Q1.4 resolution</h3>
+<p>The number of scan lines and number of pixels for each scan line. Represented in common terms as <span class="math inline">scan lines * pixels</span> for example a resolution of 1920x1080 refers to 1920 scan lines (rows) and 1080 pixels (cells per row)</p>
+<h2 id="q2-concepts-of-raster-display-short-answer">Q2 Concepts of raster display (short answer)</h2>
+<h3 id="q2.1-scan-line">Q2.1 scan line</h3>
+<p>A row of pixels within a raster pattern. Note that when <em>scanning</em> the first scan line would be completely scanned before the next would begin. There are alternative ways of scanning lines but they may induce flickering.</p>
+<h3 id="q2.2-refreshment-refresh-rate">Q2.2 refreshment &amp; refresh rate</h3>
+<p>Refresh rate refers to the number of frames rendered within a given time span. Generally we measure frames per second. Refresh rate is supported by the performance of the video controller, the size of the frame buffer, and the speed at which new frames can be generated.</p>
+<h3 id="q2.3-frame">Q2.3 frame</h3>
+<p>A frame is a single image made up of many scan lines, which each contain many pixels per line. The completed frame (a set of scan lines) is stored as a 2D matrix within the frame buffer.</p>
+<h2 id="q3-roles-of-cpu-and-gpu-in-cg-short-answer">Q3 Roles of CPU and GPU in CG (short answer)</h2>
+<h3 id="q3.1-cpu-roles">Q3.1 CPU roles</h3>
+<p>The CPU performs computations for model generation.</p>
+<h3 id="q3.2-gpu-roles">Q3.2 GPU roles</h3>
+<p>The GPU performs computations to convert model objects into framebuffer frames using techniques such as rasterization.</p>
+<h2 id="q4-cc-opengl-programming-environment-lab-practice">Q4 C/C++ OpenGL programming environment (lab practice)</h2>
+<h3 id="q4.1-cc-opengl-installation">Q4.1 C/C++ OpenGL installation</h3>
+<p>Complete? Yes</p>
+<p>If Yes, insert a screen shot image to show the completion.</p>
+<p><img src="images/cube.png" alt="Cube demo" style="width:50.0%" /> <img src="images/teapot.png" alt="Teapot demo, note the clean lighting" style="width:50.0%" /> <img src="images/teapot_no_gpu.png" alt="Teapot demo, note the choppy lighting as a result of removing GPU logic" style="width:50.0%" /></p>
+<p>If No, Add a short description to describe the issues encountered.</p>
+<h3 id="q4.2-opengl-c-project">Q4.2 OpenGL C project</h3>
+<p>Complete? Yes</p>
+<p>If Yes, insert a screen shot image to show the completion.</p>
+<figure>
+<img src="images/blender.png" alt="Screenshot of the blender demo found in examples" style="width:50.0%" /><figcaption>Screenshot of the blender demo found in examples</figcaption>
+</figure>
+<p>If No, Add a short description to describe the issues encountered.</p>
+<h3 id="q4.3-opengl-c-project">Q4.3 OpenGL C++ project</h3>
+<p>Complete? Yes</p>
+<p>If Yes, insert a screen shot image to show the completion.</p>
+<figure>
+<img src="images/glut_test.png" alt="Screenshot of the GLUT test" style="width:50.0%" /><figcaption>Screenshot of the GLUT test</figcaption>
+</figure>
+<p>If No, Add a short description to describe the issues encountered.</p>
+<p><strong>References</strong></p>
+<ol class="incremental" type="1">
+<li>CP411 a1</li>
+<li>Add your references if you used any.</li>
+</ol>

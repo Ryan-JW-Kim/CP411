@@ -1,0 +1,104 @@
+/*
+ * Description: SimpleView reference design
+ * Author: HBF
+ * Version: 2022-10-03
+ */
+
+#include <GL/glut.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include "Menu.hpp"
+#include "World.hpp"
+#include "Camera.hpp"
+#include <iostream>
+
+GLint winWidth = 800, winHeight = 800;
+GLint isInMove = 0,
+	  xbegin = 0,
+	  csType = 1, /* coordinate system type: 1 for MCS, 2 for WCS, 3 for VCS */
+	  transType = 4;
+
+Shape *selectObj = NULL;  // pointer to select object
+
+World myWorld;
+Camera myCamera;
+
+void display(void) {
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	myCamera.setProjectionMatrix();
+
+	myWorld.draw();
+	glFlush();
+	glutSwapBuffers();
+}
+
+void winReshapeFcn(GLint newWidth, GLint newHeight) {
+	glViewport(0, 0, newWidth, newHeight);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	winWidth = newWidth;
+	winHeight = newHeight;
+}
+
+void mouseActionFcn(int button, int state, int xMouse, int yMouse) {
+	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
+		isInMove = 1;
+		xbegin = xMouse;
+	}
+	if (button == GLUT_LEFT_BUTTON && state == GLUT_UP) {
+		isInMove = 0;
+	}
+}
+
+void mouseMotionFcn(GLint xMouse, GLint yMouse) {
+	if (isInMove) {
+		if (csType == 1){     //  Model transformations
+			MCSTransform(xMouse);
+		}
+		else if (csType == 2){ // WCS transformations
+			WCSTransform(xMouse);
+		}
+		else if(csType == 3){ // VCS transformations
+			VCSTransform(xMouse);
+		}
+		glutPostRedisplay();
+	}
+}
+
+void init(void) {
+	glClearColor(0.0, 0.0, 0.0, 1.0);
+	selectObj = myWorld.searchById(1);
+
+    vertex[0][0] = -1; vertex[0][1] = -1; vertex[0][2] = -1;
+    vertex[1][0] = -1; vertex[1][1] = 1;  vertex[1][2] = -1;
+    vertex[2][0] = 1;  vertex[2][1] = 1;  vertex[2][2] = -1;
+    vertex[3][0] = 1;  vertex[3][1] = -1; vertex[3][2] = -1;
+    vertex[4][0] = -1; vertex[4][1] = -1; vertex[4][2] = 1;
+    vertex[5][0] = -1; vertex[5][1] = 1;  vertex[5][2] = 1;
+    vertex[6][0] = 1;  vertex[6][1] = 1;  vertex[6][2] = 1;
+    vertex[7][0] = 1;  vertex[7][1] = -1; vertex[7][2] = 1;
+
+    face[0][0] = 0; face[0][1] = 1; face[0][2] = 2; face[0][3] = 3;
+    face[1][0] = 7; face[1][1] = 6; face[1][2] = 5; face[1][3] = 4;
+    face[2][0] = 0; face[2][1] = 4; face[2][2] = 5; face[2][3] = 1;
+    face[3][0] = 2; face[3][1] = 1; face[3][2] = 5; face[3][3] = 6;
+    face[4][0] = 3; face[4][1] = 2; face[4][2] = 6; face[4][3] = 7;
+    face[5][0] = 0; face[5][1] = 3; face[5][2] = 7; face[5][3] = 4;
+}
+
+int main(int argc, char** argv) {
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+	glutInitWindowPosition(100, 100);
+	glutInitWindowSize(winWidth, winHeight);
+	glutCreateWindow("SimpleView1 (Your name)");
+	init();
+	menu();
+	glutDisplayFunc(display);
+	glutMotionFunc(mouseMotionFcn);
+	glutMouseFunc(mouseActionFcn);
+	glutAttachMenu(GLUT_RIGHT_BUTTON);
+	glutMainLoop();
+	return 0;
+}

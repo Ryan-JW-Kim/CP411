@@ -1,0 +1,14 @@
+15:24:30 **** Rebuild of configuration Debug for project SimpleView1_reference_design ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Camera.o" "..\\src\\Camera.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\World.o" "..\\src\\World.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\SimpleView.o" "..\\src\\SimpleView.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Matrix.o" "..\\src\\Matrix.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vector.o" "..\\src\\Vector.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cube.o" "..\\src\\Cube.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Shape.o" "..\\src\\Shape.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Point.o" "..\\src\\Point.cpp" 
+g++ -o SimpleView1_reference_design.exe "src\\Camera.o" "src\\Cube.o" "src\\Matrix.o" "src\\Menu.o" "src\\Point.o" "src\\Shape.o" "src\\SimpleView.o" "src\\Vector.o" "src\\World.o" -lfreeglut -lwinmm -lgdi32 -lglew32 -lglu32 -lopengl32 
+Info: Nothing to build for SimpleView1_reference_design
+Info: Nothing to build for SimpleView1_reference_design

@@ -1,0 +1,5 @@
+15:38:49 **** Incremental Build of configuration Debug for project SimpleView1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cube.o" "..\\src\\Cube.cpp" 
+g++ -o SimpleView1.exe "src\\Camera.o" "src\\Cube.o" "src\\Matrix.o" "src\\Menu.o" "src\\Point.o" "src\\Shape.o" "src\\SimpleView.o" "src\\Vector.o" "src\\World.o" -lfreeglut -lwinmm -lgdi32 -lglew32 -lglu32 -lopengl32 
+Info: Nothing to build for SimpleView1

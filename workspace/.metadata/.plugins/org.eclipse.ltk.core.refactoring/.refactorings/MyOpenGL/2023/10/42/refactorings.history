@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MyOpenGL/src/opengl_transform3d.cpp.txt&apos; to &apos;opengl_transform3d.cpp&apos;" description="Rename resource &apos;opengl_transform3d.cpp.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/opengl_transform3d.cpp.txt" name="opengl_transform3d.cpp" stamp="1697831178806" updateReferences="true"/>
+</session>
